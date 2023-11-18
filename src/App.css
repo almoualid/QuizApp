@@ -1,38 +1,82 @@
-.App {
+/* Add some basic styling to the container */
+div {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+/* Style the quiz title */
+h2 {
+  color: #333;
+}
+
+/* Style the question number */
+h2:after {
+  content: ' / ' attr(data-total-questions);
+  color: #888;
+}
+
+/* Style the question text */
+p {
+  margin-top: 10px;
+  color: #555;
+}
+
+/* Style the options list */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Style each option item */
+li {
+  margin-bottom: 10px;
+}
+
+/* Style radio button and label */
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+label {
+  cursor: pointer;
+}
+
+/* Style the "Next Question" button */
+button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Style the "Quiz Finished" message */
+div > div {
   text-align: center;
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Style the score text */
+p {
+  color: #333;
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Style correct and incorrect answers */
+li.correct {
+  color: #4caf50;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+li.incorrect {
+  color: #f44336;
 }
