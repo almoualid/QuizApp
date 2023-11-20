@@ -1,4 +1,4 @@
-import './App.css';
+
 import QuizApp from './Compenants/Quiz';
 
 function App() {
